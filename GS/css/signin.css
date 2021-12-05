@@ -1,0 +1,162 @@
+.signin{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+}
+.signinleft{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.signinleft h2{
+    margin-left: 20px;
+    width: 60%;
+    border-bottom: .5px solid grey;   
+}
+.entermail,.enterpass{
+    margin-left: 20px;
+}
+.entermail h3,.enterpass h3{
+    margin: 10px 0;
+}
+.email2,.pass2{
+    height: 40px;
+    width: 300px;
+}
+.btn3{
+    margin: 40px 0 0 20px;
+    height: 60px;
+    width: 300px;
+}
+.setpass{
+    margin-left: 20px;
+}
+.setpass a{
+    color: mediumblue;
+    border-bottom: 0.5px solid mediumblue;
+}
+.signinright{
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(300deg, rgb(145, 145, 194), white)fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.signinright img{
+    margin: auto;
+    width: 100%;
+    opacity: 0.3;
+}
+.footer2{    
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(300deg, rgb(145, 145, 194), white)fixed;
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    border-top: 0.1px solid rgb(194, 192, 192);
+}
+.footer2 p{
+    line-height: 1em;
+    padding: 20px 0;
+}
+
+/* パスワード再設定関連 */
+.mask{
+    background-color: grey;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+#mask.hidden{
+    display: none;
+}
+
+.modal{
+    background-color: white;
+    width: 400px;
+    height: 350px;
+    padding: 1.5em;
+    border-radius: 4px;
+    position: absolute;
+    top: 40px;
+    left: 35%;
+}
+.modal p{
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+.modaltop{
+    margin-bottom: 20px;
+    border-bottom: 1px solid grey;
+    width: 300px;
+}
+.modaltop:before{
+    content: "■ ";
+}
+
+#modal.hidden{
+    transform: translate(0, -500px);
+}
+
+.entry1{
+    width: 280px;
+}
+.btn4{
+    width: 300px;
+    margin: 20px 0 10px 0;
+    display: flex;
+    gap: 10px;
+}
+.wbtn{
+    width: 100px;
+}
+.errorcheck2{
+    margin: 20px 0 0 0;
+    color: brown;
+    display: none;
+}
+.errorcheck2.active{
+    display: block;
+}
+
+.btn--orange2,
+a.btn--orange2 {
+  color: black;
+  background-color: white;
+  box-shadow: 3px 3px 10px 1px #7a7676;
+  font-size: 14px;
+  padding: 0.5em 0.8em;
+}
+.btn--orange2:hover,
+a.btn--orange2:hover {
+  color: #fff;
+  background: rgb(17, 5, 70);
+}
+a.btn--radius {
+    border-radius: 5%;
+}
+@media screen and (max-width:650px) {
+    body{
+        background: linear-gradient(300deg, rgb(145, 145, 194), white)fixed;
+    }
+    .signinright{
+        display: none;
+    }   
+    .title2{
+        width: 250px;
+        font-size: 16px;
+    }
+    .setpass{
+        width: 300px;
+    }
+}
