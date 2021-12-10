@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>randum applications</title>
+    <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/d802cc77db.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/kadai1.css">
+</head>
+<header class="header">
+    <div class="header_start">
+        <a href="#" class="brand"> Randum app: 年末入塾キャンペーン</a>
+    </div>
+</header>
+<body>
+
+    <!-- 左半分ここから -->
+    <div class="form">
+        <section class="formleft">
+            <h3 class="lefttitle">お客さま情報入力フォーム</h3>
+            <div class="item">
+                <label for="idinput">生徒番号</label>
+                <div class="studentid" id="studentid">
+                    <input type="text" name="idinput" id="idinput" disabled>
+                </div>
+            </div>
+            <div class="item">
+                <label for="passoutput">パスワード</label>
+                <div class="pass" id="pass">
+                    <input type="text" class="passout" name="passout" id="passout" disabled>
+                    <input type="button" class="idissue" id="idissue" value="発行"></input>
+                </div>
+            </div>
+            <script src="../js/studentid.js"></script>
+            <div class="item">
+                <label for="nameinput">生徒氏名　<span class="icon">必須</span></label>
+                <div class="studentname" id="studentname">
+                    <input type="text" class="nameinput" name="nameinput" id="nameinput">
+                    <h6 class="nameerror" id="nameerror">※入力してください。</h6>
+                </div>
+            </div>
+            <div class="item">
+                <label for="adinput">住所</label>
+                <div class="studentad" id="studentad">
+                    <input type="text" name="adinput" id="adinput">
+                </div>
+            </div>
+            <div class="item">
+                <label for="mailinput">メールアドレス　<span class="icon">必須</span></label>
+                <div class="email" id="email">
+                    <input class="emailinput" type="email" name="emailinput" id="emailinput">
+                    <h6 class="emailerror" id="emailerror">※入力してください。</h6>
+                </div>
+            </div>
+            <input type="button" class="infocheck" name="infocheck" id="infocheck" value="check">
+            <div class="auth">
+                <input type="checkbox" class="authcheck" id="authcheck">
+                <p>私はロボットではありません</p>
+            </div>
+            <div class="item">
+                <input type="text" class="authoutput" id="authoutput" disabled>
+            </div>
+            <div class="authcode">
+                <input type="number" class="acode" id="code1" placeholder="0" min="0" max="9" required>
+                <input type="number" class="acode" id="code2" placeholder="0" min="0" max="9" required>
+                <input type="number" class="acode" id="code3" placeholder="0" min="0" max="9" required>
+                <input type="number" class="acode" id="code4" placeholder="0" min="0" max="9" required>
+                <input type="number" class="acode" id="code5" placeholder="0" min="0" max="9" required>
+                <input type="number" class="acode" id="code6" placeholder="0" min="0" max="9" required>
+            </div>
+        </section>
+
+        <!-- 右半分はここから -->
+        <section class="formright">
+            <div class="testchoice">
+                <h3 class="righttitle">テスト受講キャンペーン</h3>
+                <label for="">開催予定テスト</label>
+                <p class="undline"></p>
+                <div class="testitem">
+                    <input type="checkbox" class="testcheck" id="tcheck1">
+                    <p>1: 予備校実力模試　<span class="icon">キャンペーン対象</span></p>
+                </div>
+                <div class="testitem">
+                    <input type="checkbox" class="testcheck" id="tcheck2">
+                    <p>2: A大学選抜模試　<span class="icon">キャンペーン対象</span></p>
+                </div>
+                <div class="testitem">
+                    <input type="checkbox" class="testcheck"  id="tcheck3">
+                    <p>3: 学内確認テスト</p>
+                </div>
+            </div>
+            <div>
+                <input type="button" class="rightsend" name="rsend" id="rsend" value="submit">
+            </div>
+            <div class="testresult" id="tresult">
+                <div class="tnum" id="tnum">
+                    <label for="">受験番号</label>
+                    <p class="undline"></p>
+                    <div class="tnumber" id="tnumber">
+                        <input class="tnright" type="number" name="tninput" id="tninput1" disabled placeholder="テスト１の受験番号">
+                        <input class="tnright" type="number" name="tninput" id="tninput2" disabled placeholder="テスト２の受験番号">
+                        <input class="tnright" type="number" name="tninput" id="tninput3" disabled placeholder="テスト３の受験番号">
+                    </div>
+                </div>
+                <div class="tsite" id="tsite">
+                    <label for="">受験会場</label>
+                    <p class="undline"></p>
+                    <div class="tsitedetail" id="tsitedetail">
+                        <input class="tsright" type="text" name="tsinput" id="tsoutput1" disabled placeholder="テスト１の受験会場">
+                        <input class="tsright" type="text" name="tsinput" id="tsoutput2" disabled placeholder="テスト２の受験会場">
+                        <input class="tsright" type="text" name="tsinput" id="tsoutput3" disabled placeholder="テスト３の受験会場">
+                    </div>
+                </div>
+            </div>
+            <input type="button" class="rightsend" name="rappli" id="rappli" value="applicate">
+            <div class="campainarea">
+                <input type="textarea" class="carea" id="carea" disabled placeholder="キャンペーン結果">
+            </div>
+            <div class="senditem">
+                <input type="button" class="leftsend" name="send" id="send" value="submit">
+                <input type="button" class="leftrest" name="reset" id="reset" value="reset">
+            </div>
+            <script src="../js/error.js"></script>
+            <script src="../js/auth.js"></script>
+    
+            <script src="../js/campain.js"></script>
+        </section>
+    </div>
+</body>
+</html>
